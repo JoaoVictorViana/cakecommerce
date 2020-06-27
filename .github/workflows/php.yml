@@ -38,6 +38,8 @@ jobs:
 
     
   linters:
+    needs: [composer]
+
     runs-on: ubuntu-latest
     
     env:
@@ -45,7 +47,6 @@ jobs:
     
     steps:
       - name: Composer Linter
-        needs: [composer]
         working-directory: ${{env.working-directory}}
         run: composer lint
     # Add a test script to composer.json, for instance: "test": "vendor/bin/phpunit"
