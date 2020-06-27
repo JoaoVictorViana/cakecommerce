@@ -1,7 +1,7 @@
 name: PHP Composer
 
 env:
-      working-directory: './web/app/cakecommerce'
+  working-directory: 'web/app/cakecommerce'
 
 on:
   push:
