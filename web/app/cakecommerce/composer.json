@@ -1,5 +1,5 @@
 {
-    "name": "cake/ecommerce",
+    
     "type" : "project",
     "license": "MIT",
     "description": "Cake e-commerce using pure php.",
