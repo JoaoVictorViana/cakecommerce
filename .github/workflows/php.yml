@@ -7,7 +7,7 @@ on:
     branches: [ master ]
 
 jobs:
-  build:
+  composer:
     
     runs-on: ubuntu-latest
     
@@ -32,13 +32,22 @@ jobs:
 
     - name: Install dependencies
       working-directory: ${{env.working-directory}}
+      id: composer-install
       if: steps.composer-cache.outputs.cache-hit != 'true'
       run: composer install --prefer-dist --no-progress --no-suggest
 
-    - name: Composer Linter
-      working-directory: ${{env.working-directory}}
-      run: composer lint
     
+  linters:
+    runs-on: ubuntu-latest
+    
+    env:
+      working-directory: './web/app/cakecommerce'
+    
+    steps:
+      - name: Composer Linter
+        needs: [composer]
+        working-directory: ${{env.working-directory}}
+        run: composer lint
     # Add a test script to composer.json, for instance: "test": "vendor/bin/phpunit"
     # Docs: https://getcomposer.org/doc/articles/scripts.md
 
