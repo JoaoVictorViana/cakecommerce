@@ -1,0 +1,13 @@
+phpqa:
+  output: cli  
+  tools: phpcs:0,phpmd:0,phpcpd:0
+  ignoredDirs: vendor
+  ignoredFiles: 
+  
+
+phpcs:
+  standard: phpcs.xml
+
+phpcpd:
+    minLines: 5
+    minTokens: 70

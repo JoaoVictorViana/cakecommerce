@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ruleset name="CakeCommerce">
+    <description> Padrão de Código</description>
+    <rule ref="PSR12" />
+    <file>app/</file>
+
+    <!-- Como escanear -->
+    <arg value="sp" /> <!-- Mostrar progresso -->
+    <arg name="colors" /> <!-- Saida Colorida -->
+    <arg name="basepath" value="." /> 
+    <arg name="parallel" value="50" />
+    <arg name="extensions" value="php" />
+
+    <config name="testVersion" value="7.2-"/>
+
+</ruleset>
