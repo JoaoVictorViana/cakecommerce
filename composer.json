@@ -9,9 +9,6 @@
             "email": "jv.duarte.viana@gmail.com"
         }
     ],
-    "require-dev": {
-        "edgedesign/phpqa": "^1.23"
-    },
     "scripts": {
         "tests" : "phpunit", 
         "lint" : "vendor/bin/phpqa",

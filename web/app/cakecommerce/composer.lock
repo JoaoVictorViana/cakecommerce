@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "832ca9597b5d401092cb1f5ce437df61",
+    "content-hash": "442ee5ee27d7fc7d8d0ff9c12b71b42c",
     "packages": [],
     "packages-dev": [
         {
@@ -1025,16 +1025,16 @@
         },
         {
             "name": "phpmetrics/phpmetrics",
-            "version": "v2.7.0",
+            "version": "v2.7.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpmetrics/PhpMetrics.git",
-                "reference": "dc6d85259cd0c23f4bc1e61f173a526ca11e9c3e"
+                "reference": "bbeaf8bfc89b6403dc51379cf3f27421c49bbb52"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpmetrics/PhpMetrics/zipball/dc6d85259cd0c23f4bc1e61f173a526ca11e9c3e",
-                "reference": "dc6d85259cd0c23f4bc1e61f173a526ca11e9c3e",
+                "url": "https://api.github.com/repos/phpmetrics/PhpMetrics/zipball/bbeaf8bfc89b6403dc51379cf3f27421c49bbb52",
+                "reference": "bbeaf8bfc89b6403dc51379cf3f27421c49bbb52",
                 "shasum": ""
             },
             "require": {
@@ -1084,7 +1084,7 @@
                 "quality",
                 "testing"
             ],
-            "time": "2020-06-26T20:22:54+00:00"
+            "time": "2020-06-27T12:57:13+00:00"
         },
         {
             "name": "phpunit/php-timer",

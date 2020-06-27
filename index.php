@@ -1,7 +1,7 @@
 <?php 
 /**
  * 
- * Project: E-commerce com php puro 
+ * Project: Architeture Twelve-Factor App 
  * Author: João Victor Duarte Viana
  * Created: 26/06/2020
  * 
