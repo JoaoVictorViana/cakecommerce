@@ -1,7 +1,7 @@
 name: PHP Composer
 
 env:
-  working-directory: 'web/app/cakecommerce'
+  working-directory: './web/app/cakecommerce'
 
 on:
   push:
@@ -32,20 +32,19 @@ jobs:
 
     - name: Install dependencies
       working-directory: ${{env.working-directory}}
-      id: composer-install
       if: steps.composer-cache.outputs.cache-hit != 'true'
       run: composer install --prefer-dist --no-progress --no-suggest
 
     
-  linters:
-    needs: [composer]
+  #linters:
+  #  needs: [composer]
 
-    runs-on: ubuntu-latest
+  #  runs-on: ubuntu-latest
     
-    steps:
-      - name: Composer Linter
-        working-directory: ${{env.working-directory}}
-        run: composer lint
+  #  steps:
+  #    - name: Composer Linter
+  #      working-directory: ${{env.working-directory}}
+  #      run: composer lint
     # Add a test script to composer.json, for instance: "test": "vendor/bin/phpunit"
     # Docs: https://getcomposer.org/doc/articles/scripts.md
 
