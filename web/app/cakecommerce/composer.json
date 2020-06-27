@@ -1,0 +1,20 @@
+{
+    "name": "cake/ecommerce",
+    "type" : "project",
+    "license": "MIT",
+    "description": "Cake e-commerce using pure php.",
+    "authors": [
+        {
+            "name": "João Victor Duarte Viana",
+            "email": "jv.duarte.viana@gmail.com"
+        }
+    ],
+    "require-dev": {
+        "edgedesign/phpqa": "^1.23"
+    },
+    "scripts": {
+        "tests" : "phpunit", 
+        "lint" : "vendor/bin/phpqa",
+        "lint:fix": "vendor/bin/phpcbf"
+    }
+}
