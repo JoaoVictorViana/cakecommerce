@@ -1,8 +1,5 @@
 name: PHP Composer
 
-defaults:
-  working-directory: './web/app/cakecommerce'
-
 on:
   push:
     branches: [ master ]
@@ -11,18 +8,23 @@ on:
 
 jobs:
   build:
-
+    
     runs-on: ubuntu-latest
+    
+    env:
+      working-directory: './web/app/cakecommerce'
 
     steps:
     - uses: actions/checkout@v2
 
     - name: Validate composer.json and composer.lock
+      working-directory: ${{env.working-directory}}
       run: composer validate
       
     - name: Cache Composer packages
       id: composer-cache
       uses: actions/cache@v2
+      working-directory: ${{env.working-directory}}
       with:
         path: vendor
         key: ${{ runner.os }}-php-${{ hashFiles('**/composer.lock') }}
@@ -30,10 +32,12 @@ jobs:
           ${{ runner.os }}-php-
 
     - name: Install dependencies
+      working-directory: ${{env.working-directory}}
       if: steps.composer-cache.outputs.cache-hit != 'true'
       run: composer install --prefer-dist --no-progress --no-suggest
 
     - name: Composer Linter
+      working-directory: ${{env.working-directory}}
       run: composer lint
     
     # Add a test script to composer.json, for instance: "test": "vendor/bin/phpunit"
