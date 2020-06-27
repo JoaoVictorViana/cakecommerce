@@ -35,18 +35,6 @@ jobs:
       if: steps.composer-cache.outputs.cache-hit != 'true'
       run: composer install --prefer-dist --no-progress --no-suggest
 
-    
-  #linters:
-  #  needs: [composer]
-
-  #  runs-on: ubuntu-latest
-    
-  #  steps:
-  #    - name: Composer Linter
-  #      working-directory: ${{env.working-directory}}
-  #      run: composer lint
-    # Add a test script to composer.json, for instance: "test": "vendor/bin/phpunit"
-    # Docs: https://getcomposer.org/doc/articles/scripts.md
-
-    # - name: Run test suite
-    #   run: composer run-script test
+    - name: Composer lint
+      working-directory: ${{env.working-directory}}
+      run: composer lint
