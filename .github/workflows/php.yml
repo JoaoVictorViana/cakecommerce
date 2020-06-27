@@ -1,5 +1,8 @@
 name: PHP Composer
 
+env:
+      working-directory: './web/app/cakecommerce'
+
 on:
   push:
     branches: [ master ]
@@ -10,9 +13,6 @@ jobs:
   composer:
     
     runs-on: ubuntu-latest
-    
-    env:
-      working-directory: './web/app/cakecommerce'
 
     steps:
     - uses: actions/checkout@v2
@@ -41,9 +41,6 @@ jobs:
     needs: [composer]
 
     runs-on: ubuntu-latest
-    
-    env:
-      working-directory: './web/app/cakecommerce'
     
     steps:
       - name: Composer Linter
